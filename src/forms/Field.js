@@ -15,3 +15,10 @@ export const Field = ({ children, label, error }) => {
 };
 
 // Get id prop from a child element
+export const getChildId = (children) => {
+    const child = React.Children.only(children);
+
+    if ('id' in child?.props) {
+        return child.props.id
+    }
+};
