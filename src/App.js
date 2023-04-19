@@ -2,10 +2,19 @@ import './App.css';
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AppProvider } from './configuration/state';
+import { Contact } from './componenets/Contact';
 
 function App() {
   return (
-   <h1>New Course</h1>
+   <div className="App">
+    <AppProvider>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Contact />} />
+        </Routes>
+      </Router>
+    </AppProvider>
+   </div>
   );
 }
 
